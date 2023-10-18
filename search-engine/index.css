@@ -89,4 +89,22 @@
     font-size: 20px;
   }
   
-  
+ small {
+  font-family: sans-serif;
+  padding: 10px;
+ position: relative;
+ bottom: 30px;
+ }
+
+ a {
+  color: blueviolet;
+ text-decoration: none;
+ 
+ transition: all 200ms ease-in-out;
+ }
+
+ a:hover {
+  text-decoration: underline;
+  color: blue;
+ }
+
