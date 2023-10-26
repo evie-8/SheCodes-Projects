@@ -6,3 +6,4 @@
 |Project Name    | Description   |
 | :-------------  | :------------- |
 |[Search Engine](./search-engine/) | Creating a search engine where user enters a city and the weather details are displayed |
+|[Weather app](./weather-app/) | Creating a fully functioning weather app that is responsive|  
