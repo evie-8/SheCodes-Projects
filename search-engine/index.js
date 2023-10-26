@@ -34,13 +34,14 @@ function apiResponse(response) {
   let comment = document.querySelector(".comment");
   let humid = document.querySelector("#humid");
   let wind = document.querySelector("#wind");
-
+  let image = document.querySelector(".weather-icon");
   //changing the parameters
   bigH2.innerHTML = Math.round(response.data.main.temp);
   city.innerHTML = response.data.name;
   comment.innerHTML = response.data.weather[0].description;
   humid.innerHTML = `Humidty: ${response.data.main.humidity}%`;
   wind.innerHTML = `Windy: ${Math.round(response.data.wind.speed)}km/h`;
+  image.src = ` https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 }
 
 //default weather to show on start
@@ -75,3 +76,27 @@ function searchEngine(event) {
 }
 
 form.addEventListener("submit", searchEngine);
+
+//change to celcius or fanhereit
+let fanhereit = document.querySelector(".fanhereit");
+let celcius = document.querySelector(".celcius");
+
+celcius.addEventListener("click", function () {
+  let deg = document.querySelector(".big-h2");
+  let degree = (deg.innerHTML - 32) * (5/9)
+  deg.innerHTML = `${Math.round(degree)}`;
+  celcius.classList.add("styledeg");
+  if (fanhereit.classList.contains("styledeg")) {
+    fanhereit.classList.remove("styledeg");
+  }
+});
+
+fanhereit.addEventListener("click", function () {
+  let deg = document.querySelector(".big-h2");
+  let degree = deg.innerHTML * (9/5) + 32
+  deg.innerHTML = `${Math.round(degree)}`;
+  fanhereit.classList.add("styledeg");
+  if (celcius.classList.contains("styledeg")) {
+    celcius.classList.remove("styledeg");
+  }
+});
