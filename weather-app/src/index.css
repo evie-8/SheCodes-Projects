@@ -454,9 +454,9 @@ body {
 
 /* main section */
 main {
-    height: calc(100vh - 80px);
-    height: calc(100svh - 80px); /* for mobile */
-    overflow: auto;
+    height: calc(100vh - 96px);
+    height: calc(100svh - 96px); /* for mobile */
+    overflow: hidden;
 }
 
 article.container {
