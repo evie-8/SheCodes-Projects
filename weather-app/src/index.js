@@ -1,11 +1,6 @@
 const logo = document.querySelector(".logo img");
 const root = document.body;
 
-window.addEventListener("load", function () {
-let loader = document.querySelector(".loading");
-loader.style.display = "none";
-});
-
 logo.addEventListener("click", function () {
 if (root.classList.contains('light-mode')) {
     root.classList.remove('light-mode');
