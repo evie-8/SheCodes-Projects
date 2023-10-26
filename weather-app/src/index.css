@@ -728,17 +728,19 @@ align-items: center;
     place-items: center;
     z-index: 1;
     display: none;
+    
 }
 
 .loading::before {
     content: "";
     width: 48px;
     height: 48px;
-    border: 4px solid var(--background);
+    border: 4px solid var(--on-background);
     border-block-start-color: transparent;
     border-radius: var(--radius-circle);
     animation: loading 500ms linear infinite;
 }
+
 
 /*error*/
 .error-content {
