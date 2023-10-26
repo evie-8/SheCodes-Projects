@@ -82,8 +82,8 @@
     --bg-aqi-5: #E589B7;        /* New color for AQI-5 background */
     --on-bg-aqi-5: #331F29;     /* Text color on AQI-5 background for light mode */
     --white: hsl(0, 0%, 5%);
-    --white-alpha-4: hsla(0, 0%, 100%, 0.04);
-    --white-alpha-8: hsla(0, 0%, 100%, 0.08);
+    --white-alpha-4: hsla(0, 0%, 0%, 0.24);
+    --white-alpha-8: hsla(0, 0%, 0%, 0.28);
     --black-alpha-10: hsla(0, 0%, 0%, 0.1);
 
     /* Adjusted gradients for light mode */
@@ -155,7 +155,7 @@ body {
     background-color: var(--background);
     color: var(--on-background);
     font-size: var(--body-3);
-    overflow: auto;
+    overflow: hidden;
    
 }
 
