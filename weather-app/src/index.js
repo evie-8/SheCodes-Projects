@@ -44,19 +44,19 @@ let urls = {
   },
 
   fiveDayForecast(latitude, longitude) {
-    return `api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric`;
+    return `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric`;
   },
 
   airQuality(latitude, longitude) {
-    return `http://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}`;
+    return `https://api.openweathermap.org/data/2.5/air_pollution?lat=${latitude}&lon=${longitude}`;
   },
 
   changeGeoToCity(latitude, longitude) {
-    return `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5`;
+    return `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5`;
   },
 
   changeCityToGeo(cityName) {
-    return `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5`;
+    return `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5`;
   }
 }
 
