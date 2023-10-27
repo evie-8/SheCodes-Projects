@@ -927,7 +927,7 @@ visibility: hidden;
         height: 100%;
     }
 
-    .search-view.active, .search-view.active {
+    .search-view, .search-view.active {
         all: unset;
         display: block;
         position: relative;
