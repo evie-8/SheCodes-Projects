@@ -43,7 +43,7 @@ let urls = {
 };
 
 /**
- *  creeating  date and tie in utc format. ie converting the time depending on the api result
+ *  creating  date and tie in utc format. ie converting the time depending on the api result
  *  date: Thursday, 16 Feb
  * date and timezone in seconds
  */
@@ -237,7 +237,7 @@ window.addEventListener("hashchange", hasHashCheck);
 
 window.addEventListener("load", function () {
   if (!window.location.hash) {
-    this.window.location.hash = "#/current-location";
+    this.window.location.hash = defaultLocation;
   } else {
     hasHashCheck();
   }
@@ -248,16 +248,15 @@ let container = document.querySelector("[data-container]");
 let loadData = document.querySelector("[data-loading]");
 let currentPos = document.querySelector("[data-current-location-btn]");
 let errors = document.querySelector("[data-error-content]");
-let footer = document.querySelector("footer");
 let obj = {};
 
 function updateWeatherParts(lat, lon) {
   loadData.style.display = "grid";
-  loadData.style.overflowY = "hidden";
+  container.style.overflowY = "hidden";
   container.classList.remove("fade-in");
   errors.style.display = "none";
-  let currentweather = document.querySelector("[data-current-weather]");
 
+  let currentweather = document.querySelector("[data-current-weather]");
   currentweather.innerHTML = "";
 
   if (window.location.hash === "#/current-location") {
@@ -522,7 +521,7 @@ function changeForecast(forecast) {
     dailyForecast.querySelector("[data-forecast-list]").appendChild(li);
   }
   loadData.style.display = "none";
-  loadData.style.overflowY = "overlay";
+  container.style.overflowY = "overlay";
   container.classList.add("fade-in");
 }
 
